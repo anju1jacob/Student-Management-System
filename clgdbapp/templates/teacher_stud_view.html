@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content1 %}
+
+<div class="container-fluid mt-3">
+    <table class="table table-striped" style="width: 70%; margin-left: 10%; margin-top: 5%;">
+        <thead >
+          <th colspan="10" style="text-align: center;background-color: rgb(184, 126, 238);">TEACHER'S</th>
+          <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Phone</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in students %}
+            <tr>
+                <td>{{ i.stud_id.first_name }}</td>
+                <td>{{ i.stud_id.last_name }}</td>
+                <td>{{ i.stud_id.email }}</td>
+                <td>{{ i.dept_id.dept_name }}</td>
+                <td>{{ i.phone }}</td>
+               
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+</div>
+
+{% endblock content1 %}

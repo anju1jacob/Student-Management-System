@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content1 %}
+
+<div class="container-fluid mt-3">
+    <div style=" background-image: linear-gradient(to bottom right, rgb(238, 97, 198), rgb(123, 152, 238)); 
+                  width: 250px; height: 85px;border-radius: 8px; margin-left: 60px; margin-top: 100px;">
+        <center>
+            <h4 style="padding: 20px;"> <a href="admin_viewstud" style="color: white; text-decoration: none;">
+                View All students</a> </h4>
+        </center>
+
+    </div>
+
+    <div style=" background-image: linear-gradient(to bottom right, rgb(238, 97, 198), rgb(123, 152, 238)); 
+                width: 250px; height: 85px;border-radius: 8px; margin: 60px;">
+        <center>
+            <h4 style="padding: 20px;"> <a href="stud_accept" style="color: white; text-decoration: none;">
+                Accept students</a> </h4>
+        </center>
+
+    </div>
+
+    <div>
+        <img src="{% static 'image/stud.jpg'%}" alt="" style="width: 55%; float: right; margin-top: -300px;margin-right: 100px;">
+    </div>
+</div>
+
+{% endblock content1 %}

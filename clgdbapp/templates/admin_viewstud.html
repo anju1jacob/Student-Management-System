@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content1 %}
+
+<div class="container-fluid mt-3">
+    <table class="table table-striped" style="width: 70%; margin-left: 10%; margin-top: 5%;">
+        <thead >
+          <th colspan="10" style="text-align: center;background-color: rgb(184, 126, 238);">STUDENTS</th>
+          <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>UserName</th>
+            <th>Department</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in views %}
+            <tr>
+                <td>{{ i.stud_id.first_name }}</td>
+                <td>{{ i.stud_id.last_name }}</td>
+                <td>{{ i.stud_id.email }}</td>
+                <td>{{ i.stud_id.username }}</td>
+                <td>{{ i.dept_id.dept_name }}</td>
+                <td>{{ i.address }}</td>
+                <td>{{ i.phone }}</td>
+                <td>
+                  <button class="btn btn-danger"><a href="del_stud/{{ i.id }}" 
+                    style="text-decoration: none; color: white;">Delete</a></button></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+</div>
+
+{% endblock content1 %}

@@ -1,0 +1,39 @@
+
+{% extends 'main.html' %}
+{% load static %}
+{% block content1 %}
+
+<div class="container-fluid mt-3">
+  <table class="table table-striped" style="width: 50%; margin-left: 20%; margin-top: 5%;">
+    <th>Department</th>
+    <th>Count Of Teachers</th>
+    <th>Count Of Students</th>
+    <tr>
+        <td>CSE</td>
+        <td>{{ cs_dept_count }}</td>
+        <td>{{ cs }}</td>
+    </tr>
+    <tr>
+        <td>ECE</td>
+        <td>{{ ec_dept_count }}</td>
+        <td>{{ ec }}</td>
+    </tr>
+    <tr>
+        <td>EEE</td>
+        <td>{{ ee_dept_count }}</td>
+        <td>{{ ee }}</td>
+    </tr>
+    <tr>
+        <td>CE</td>
+        <td>{{ ce_dept_count }}</td>
+        <td>{{ ce }}</td>
+    </tr>
+    <tr>
+        <td>ME</td>
+        <td>{{ me_dept_count }}</td>
+        <td>{{ me }}</td>
+    </tr>
+  </table>
+</div>
+{% endblock content1 %}
+

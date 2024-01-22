@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content1 %}
+
+<div class="container-fluid mt-3">
+    <table class="table table-striped" style="width: 70%; margin-left: 10%; margin-top: 5%;">
+        <thead >
+          <th colspan="10" style="text-align: center;background-color: rgb(184, 126, 238);">STUDENTS</th>
+          <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Department</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in views %}
+            <tr>
+                <td>{{ i.stud_id.first_name }}</td>
+                <td>{{ i.stud_id.last_name }}</td>
+                <td>{{ i.dept_id.dept_name }}</td>
+                <td>
+                  <button class="btn btn-danger"><a href="confirm_stud/{{ i.id }}" 
+                    style="text-decoration: none; color: white;">confirm</a></button></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+</div>
+
+{% endblock content1 %}

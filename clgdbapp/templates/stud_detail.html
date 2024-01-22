@@ -1,0 +1,61 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content1 %}
+
+<div class="container-fluid mt-3">
+  <center>
+    <div style="height: 580px; width: 40%; background-color: white;margin-top: 50px;padding: 25px;  ">
+      <h3>Welcome Back,   {{ context.stud_id.first_name }}!</h3><br>
+    <form action="" method="post" style="margin-left: 18%;">
+        {% csrf_token %}
+          <div class="row mb-3">
+              <label for="inputfn3" class="col-sm-2 col-form-label">FirstName </label>
+              <div class="col-sm-6" style="margin-left: 15%;">
+                {{ context.stud_id.first_name }}
+              </div>
+          </div>
+          <div class="row mb-3">
+              <label  class="col-sm-2 col-form-label">LastName</label>
+              <div class="col-sm-6" style="margin-left: 15%;">
+                {{ context.stud_id.last_name }}
+              </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-6" style="margin-left: 15%;">
+              {{ context.stud_id.email }}
+            </div>
+          </div>
+          <div class="row mb-3">
+              <label  class="col-sm-2 col-form-label">UserName</label>
+              <div class="col-sm-6" style="margin-left: 15%;">
+                {{ context.stud_id.username }}
+              </div>
+          </div>
+          <div class="row mb-3">
+              <label  class="col-sm-2 col-form-label">Department</label>
+              <div class="col-sm-6" style="margin-left: 15%;">
+                {{ context.dept_id.dept_name }}
+              </div>
+          </div>
+          <div class="row mb-3">
+              <label  class="col-sm-2 col-form-label">Address</label>
+              <div class="col-sm-6" style="margin-left: 15%;">
+                {{ context.address }}
+              </div>
+          </div>
+          <div class="row mb-3">
+              <label  class="col-sm-2 col-form-label">Phone</label>
+              <div class="col-sm-6" style="margin-left: 15%;">
+                {{ context.phone }}
+              </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-right: 20%;" ><a href="stud_edit/{{ context.id}}" style="text-decoration: none;color: white;">
+            Edit</a></button>
+        </form>
+   
+    </div>
+  </center>
+</div>
+
+{% endblock content1 %}
